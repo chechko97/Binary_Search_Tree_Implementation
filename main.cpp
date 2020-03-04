@@ -56,13 +56,13 @@ Node* deleteNode(Node *root, int key) {
 		if (root->left == NULL) {
 			Node *temp = new Node;
 			temp = root->right;
-			delete[] root; 
+			delete root; 
 			return temp;
 		}
 		else if (root->right == NULL) {
 			Node *temp = new Node;
 			temp = root->left;
-			delete[] root;
+			delete root;
 			return temp;
 		}
 		// now we are at the case of node with two children
@@ -119,7 +119,7 @@ int main()
 	inorder(root);
 
 
-	delete[] root;
+	delete root;
 	cout << endl;
 	system("pause");
 	return 0;
